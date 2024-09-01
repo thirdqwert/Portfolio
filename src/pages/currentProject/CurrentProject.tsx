@@ -10,13 +10,13 @@ import { Pagination } from "swiper/modules"
 import { useTranslation } from "react-i18next"
 import { gitRepoStore } from "../../store/githubRepo/gitRepoStore"
 import Header from "../../layout/header/Header"
-import { FC } from "react"
+import { FC, useEffect } from "react"
 
-const CurrentProject:FC = () => {
+const CurrentProject: FC = () => {
     let { id } = useParams()
     let navigate = useNavigate()
     let { t } = useTranslation()
-    let { reposData, isLoading,error } = gitRepoStore()
+    let { reposData, isLoading, error } = gitRepoStore()
     let currentItem = reposData && reposData.find((repo) => repo.name == id)
     if (reposData && !reposData.find((item) => item.name == id)) {
         navigate('/notefound')
@@ -33,14 +33,15 @@ const CurrentProject:FC = () => {
     }
     if (error) {
         return (
-          <>
-            <Header />
-            <MainL>
-              <h2>{t('ErrorRefreshThePageAndTryAgain')}</h2>
-            </MainL>
-          </>
+            <>
+                <Header />
+                <MainL>
+                    <h2>{t('ErrorRefreshThePageAndTryAgain')}</h2>
+                </MainL>
+            </>
         )
-      }
+    }
+
     return (
         <>
             <Header

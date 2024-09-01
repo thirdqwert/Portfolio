@@ -1,4 +1,4 @@
-import { FC, FormEvent, useRef, useState } from 'react'
+import { FC, FormEvent, useEffect, useRef, useState } from 'react'
 import MainL from '../../layout/main/MainL'
 import s from './Contacts.module.scss'
 import { useForm } from 'react-hook-form'
@@ -6,7 +6,8 @@ import emailjs from '@emailjs/browser';
 import { instagram, telegram } from '../../utils/getIcons'
 import { useTranslation } from 'react-i18next'
 import Header from '../../layout/header/Header';
-const Contacts:FC = () => {
+import ScrollToTop from '../../components/scrollToTop/ScrollToTop';
+const Contacts: FC = () => {
   let { t } = useTranslation()
   const [errorSend, setErrorSend] = useState('')
   const form = useRef(null);
@@ -40,7 +41,6 @@ const Contacts:FC = () => {
         );
     }
   }
-
   return (
     <>
       <Header

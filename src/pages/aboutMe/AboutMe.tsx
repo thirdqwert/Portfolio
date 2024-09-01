@@ -4,14 +4,15 @@ import Skills from '../../components/skills/Skills'
 import MainL from '../../layout/main/MainL'
 import { useTranslation } from 'react-i18next'
 import Header from '../../layout/header/Header'
-import { FC } from 'react'
-const AboutMe:FC = () => {
+import { FC, useEffect } from 'react'
+import ScrollToTop from '../../components/scrollToTop/ScrollToTop'
+const AboutMe: FC = () => {
   let { t } = useTranslation()
   return (
     <>
-    <Header
-    headerText={'About Me'}
-    />
+      <Header
+        headerText={'About Me'}
+      />
       <MainL>
         <section className={s.aboutMeSection}>
           <div className={s.aboutMe}>

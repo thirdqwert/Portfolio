@@ -3,7 +3,7 @@ import s from './layout/sidebar/Sidebar.module.scss'
 import m from './layout/main/MainL.module.scss'
 import clsx from "clsx"
 import { PortfolioContext } from "./context/portfolioContext"
-import { RouterProvider, useLocation } from "react-router-dom"
+import { RouterProvider } from "react-router-dom"
 import { useMediaQuery } from "react-responsive"
 import { getGitData } from "./api/getGitData"
 import { gitRepoStore } from "./store/githubRepo/gitRepoStore"
@@ -33,7 +33,6 @@ const App: FC = () => {
     localStorage.setItem('theme', newTheme);
     setChangeTheme(localStorage.getItem('theme'));
   }
-
   return (
     <>
       <PortfolioContext.Provider value={{

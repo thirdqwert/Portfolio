@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 import MainL from "../../layout/main/MainL"
-import { FC, useState } from "react"
+import { FC, useEffect, useState } from "react"
 import s from './Projects.module.scss'
 import 'swiper/css'
 import 'swiper/css/pagination';
@@ -12,10 +12,11 @@ import SwipeProjects from '../../layout/swipeProjects/SwipeProjects'
 import { gitRepoStore } from '../../store/githubRepo/gitRepoStore'
 import Header from '../../layout/header/Header'
 import Load from '../../components/load/Load'
-const Projects:FC = () => {
+const Projects: FC = () => {
   const [swiperOrGrid, setSwiperOrGrid] = useState(false)
   let { t } = useTranslation()
   let { reposData, isLoading, error } = gitRepoStore()
+
   if (isLoading) {
     return (
       <>
