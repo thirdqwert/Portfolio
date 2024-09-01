@@ -1,0 +1,43 @@
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 20px;
+    top: 0;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 9999;
+    background: var(--mainBack);
+    transition: .3s;
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &__pageName {
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Montserrat';
+            text-transform: uppercase;
+            color: var(--mainColor);
+        }
+
+        &__btnMenu {
+            font-size: 25px;
+            cursor: pointer;
+
+            svg {
+                path {
+                    color: var(--mainColor);
+                }
+            }
+        }
+
+        &__changeLang {
+            color: var(--mainColor);
+            text-transform: uppercase;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+
+}

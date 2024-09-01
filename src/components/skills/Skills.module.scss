@@ -1,0 +1,28 @@
+.skills__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    border: 1px solid var(--border-color);
+    &_img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+    &_title {
+        color: var(--mainColor);
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding-top: 10px;
+    }
+
+    &_text {
+        color: var(--mainColor);
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding-top: 5px;
+    }
+}

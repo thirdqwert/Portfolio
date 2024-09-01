@@ -1,0 +1,23 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    padding-left: 25%;
+    padding-top: 71px;
+    transition: .3s;
+
+    &.small {
+        padding-left: 75px;
+
+        @media (max-width:575.98px) {
+            padding-left: 0px;
+        }
+    }
+
+    @media (max-width: 1199.98px) {
+        padding-left: 75px;
+    }
+    @media (max-width:575.98px) {
+        padding-left: 0px;
+    }
+
+}

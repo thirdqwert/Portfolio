@@ -1,0 +1,47 @@
+.project {
+    width: 100%;
+    padding-top: 80px;
+    animation-name: fromtop;
+    animation-duration: .3s;
+
+    &__cnt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        &_img {
+            border: 1px solid var(--border-color);
+            img {
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+        &_link {
+            padding: 2px 15px;
+            border: var(--border-color) 1px solid;
+            color: var(--mainColor);
+        }
+        &_name {
+            font-weight: 500;
+            color: var(--mainColor);
+        }
+
+        &_date {
+            font-weight: 200;
+            color: var(--mainColor);
+        }
+
+    }
+}
+
+@keyframes fromtop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

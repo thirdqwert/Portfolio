@@ -1,0 +1,118 @@
+.aboutMeSection {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    animation-name: fromtop;
+    animation-duration: .3s;
+    width: 100%;
+    background: var(--mainBack);
+    transition: .3s;
+}
+
+.aboutMe__title {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--mainColor);
+}
+
+.aboutMe {
+    &__cnt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_box {
+            max-width: 680px;
+            width: 100%;
+            border: 1px solid var(--border-color);
+            padding: 30px 20px;
+
+            &_top {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(253px, 1fr));
+                gap: 20px;
+                justify-items: center;
+                padding-bottom: 10px;
+            }
+
+        }
+
+        &_avt {
+            width: 250px;
+            height: 250px;
+            border-radius: 100%;
+            object-fit: cover;
+
+        }
+
+        &_inf {
+            padding: 10px 0;
+            font-size: 20px;
+
+            &_text {
+                color: var(--mainColor);
+                font-weight: 700;
+                padding: 10px 0;
+                font-family: 'Montserrat';
+                @media (max-width:575.98px) {
+                    padding: 5px 0;
+                }
+                span {
+                    font-family: 'Montserrat';
+                    font-weight: 400;
+                    color: var(--mainColor);
+                }
+            }
+        }
+
+        &_descp {
+            font-family: 'Montserrat';
+            font-size: 20px;
+            font-weight: 500;
+            text-align: justify;
+            line-height: 1.5;
+            color: var(--mainColor);
+        }
+    }
+}
+
+
+
+.skills {
+    padding-top: 60px;
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        justify-content: center;
+        column-gap: 20px;
+        row-gap: 15px;
+        padding: 0 15px;
+    }
+
+    &__title {
+        text-align: center;
+        color: var(--mainColor);
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding-bottom: 30px;
+    }
+}
+
+
+@keyframes fromtop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
