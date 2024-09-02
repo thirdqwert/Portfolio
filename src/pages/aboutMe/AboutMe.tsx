@@ -1,5 +1,5 @@
 import s from './AboutMe.module.scss'
-import avatar from '../../assets/img/aboutMe.png'
+import avatar from '../../assets/img/MyAvatar.jpg'
 import Skills from '../../components/skills/Skills'
 import MainL from '../../layout/main/MainL'
 import { useTranslation } from 'react-i18next'

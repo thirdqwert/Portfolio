@@ -4,8 +4,9 @@
 :root {
     --mainColor: white;
     --imgFilter: 0;
+    --border-color:white;
     --blurBlack: rgba(0, 0, 0, 0.147);
-    --fullBackground: linear-gradient(-45deg, #492216, #451226, #113d4e, #0b3a2f);
+    --fullBackground: linear-gradient(-45deg, #6e3423, #662740, #1d6582, #1d9478);
 }
 
 * {
@@ -55,7 +56,7 @@ ul {
 }
 
 .back.dark {
-    --fullBackground: linear-gradient(133deg, rgba(0, 0, 0, 1) 0%, rgba(66, 66, 66, 1) 50%, rgba(191, 191, 191, 1) 100%);
+    --fullBackground: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(66, 66, 66, 1) 50%, rgba(191, 191, 191, 1) 100%);
 }
 
 .wrapper.disable {
