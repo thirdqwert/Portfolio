@@ -20,7 +20,8 @@
         &_changeMode {
             display: inline-flex;
             padding: 10px 0;
-            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            background: var(--blurBlack);
             color: var(--mainColor);
             width: 90px;
             text-transform: uppercase;
@@ -36,13 +37,14 @@
         }
 
         &_item {
-            border: 1px solid var(--border-color);
             padding: 10px 10px 20px;
             display: flex !important;
             flex-direction: column;
             align-items: center;
             gap: 5px;
             max-width: 100%;
+            backdrop-filter: blur(10px);
+            background: var(--blurBlack);
 
             &_img {
                 max-height: 564px;
@@ -72,7 +74,7 @@
 
             &_link {
                 padding: 2px 15px;
-                border: var(--border-color) 1px solid;
+                border: rgb(255 255 255 / 24%) 1px solid;
                 color: var(--mainColor);
             }
         }

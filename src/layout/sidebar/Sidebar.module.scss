@@ -1,8 +1,8 @@
 .sidebar {
     position: fixed;
-    top: 71px;
+    top: 70px;
     left: 0;
-    height: calc(100vh - 71px);
+    height: calc(100vh - 70px);
     width: 25%;
 
     &.small {
@@ -25,8 +25,6 @@
         bottom: 0;
         border: none;
         z-index: 999;
-        background: rgba(0, 0, 0, 0.532);
-
         .nav {
             max-width: 400px;
             border-right: none;
@@ -60,9 +58,9 @@
         overflow-x: hidden;
         gap: 20px;
         width: 100%;
-        border-right: var(--border-color) 1px solid;
-        background: var(--mainBack);
         transition: .3s;
+        backdrop-filter: blur(10px);
+        background: var(--blurBlack);
 
         @media (max-width:1199.98px) {
             transition: 0s;

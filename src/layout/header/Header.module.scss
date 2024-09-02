@@ -3,10 +3,11 @@
     width: 100%;
     padding: 20px 20px;
     top: 0;
-    border-bottom: 1px solid var(--border-color);
     z-index: 9999;
-    background: var(--mainBack);
     transition: .3s;
+    backdrop-filter: blur(10px);
+    background: var(--blurBlack);
+
     .nav {
         display: flex;
         flex-direction: row;

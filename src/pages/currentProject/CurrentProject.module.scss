@@ -10,7 +10,6 @@
         align-items: center;
         gap: 5px;
         &_img {
-            border: 1px solid var(--border-color);
             img {
                 width: 100%;
                 vertical-align: middle;
@@ -18,7 +17,7 @@
         }
         &_link {
             padding: 2px 15px;
-            border: var(--border-color) 1px solid;
+            border: rgb(255 255 255 / 24%) 1px solid;
             color: var(--mainColor);
         }
         &_name {

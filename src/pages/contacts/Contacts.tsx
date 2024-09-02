@@ -3,10 +3,10 @@ import MainL from '../../layout/main/MainL'
 import s from './Contacts.module.scss'
 import { useForm } from 'react-hook-form'
 import emailjs from '@emailjs/browser';
-import { instagram, telegram } from '../../utils/getIcons'
+import { telegram } from '../../utils/getIcons'
 import { useTranslation } from 'react-i18next'
 import Header from '../../layout/header/Header';
-import ScrollToTop from '../../components/scrollToTop/ScrollToTop';
+import { current } from '@reduxjs/toolkit';
 const Contacts: FC = () => {
   let { t } = useTranslation()
   const [errorSend, setErrorSend] = useState('')
@@ -33,14 +33,16 @@ const Contacts: FC = () => {
         .then(
           () => {
             setErrorSend('')
-            reset()
           },
           (error) => {
             setErrorSend(error)
           },
         );
     }
+    form.current = null
+    reset()
   }
+  console.log(form.current);
   return (
     <>
       <Header
@@ -82,7 +84,6 @@ const Contacts: FC = () => {
                 <button disabled={!isValid}>{t('send')}</button>
               </form>
               <div className={s.contacts__cnt_links}>
-                <a className={s.link} href='https://www.instagram.com/lorem123331'><img src={instagram} alt="" /></a>
                 <div className={s.link}><a href='https://telegram.me/sghshhjd'>{telegram}</a></div>
               </div>
             </div>

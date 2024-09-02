@@ -44,7 +44,8 @@ const App: FC = () => {
         changeTheme,
         isLowerMidScreen,
       }}>
-        <div className={`wrapper ${changeTheme} ${isLowerMidScreen && sidebarStatus ? 'disable' : ''}`}>
+        <div className={`wrapper ${isLowerMidScreen && sidebarStatus ? 'disable' : ''}`}>
+          <div className={`back ${changeTheme}`}></div>
           <RouterProvider router={route} />
         </div>
       </PortfolioContext.Provider>

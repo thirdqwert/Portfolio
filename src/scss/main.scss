@@ -2,10 +2,10 @@
 @import url(swiper.scss);
 
 :root {
-    --mainColor: rgb(0, 0, 0);
-    --mainBack: rgb(255, 255, 255);
+    --mainColor: white;
     --imgFilter: 0;
-    --border-color:rgb(165, 165, 165);
+    --blurBlack: rgba(0, 0, 0, 0.147);
+    --fullBackground: linear-gradient(-45deg, #492216, #451226, #113d4e, #0b3a2f);
 }
 
 * {
@@ -33,30 +33,36 @@ ul {
 
 .wrapper {
     min-height: 100vh;
-    transition: .3s ;
-    background: var(--mainBack);
-    color: var(--mainColor);
+    transition: .3s;
 }
 
-.wrapper.dark {
-    --mainColor: rgb(255, 255, 255);
-    --mainBack: rgb(34, 34, 34);
-    --imgFilter: 1;
+.back {
+    background: var(--fullBackground);
+    animation-name: gradient;
+    animation-duration: 15s;
+    background-size: 400% 400%;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: .3s;
 }
-.wrapper.dark {
-    :disabled {
-        background:rgb(59, 59, 59) ;
-    }
+
+.back.dark {
+    --fullBackground: linear-gradient(133deg, rgba(0, 0, 0, 1) 0%, rgba(66, 66, 66, 1) 50%, rgba(191, 191, 191, 1) 100%);
 }
-.wrapper {
-    :disabled {
-        background:rgb(186, 186, 186) ;
-    }
-}
+
 .wrapper.disable {
     height: 100vh;
     overflow: hidden;
 }
+
 @keyframes fromtop {
     0% {
         transform: translateY(-100px);
@@ -66,5 +72,19 @@ ul {
     100% {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }

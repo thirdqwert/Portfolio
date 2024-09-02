@@ -10,7 +10,7 @@ import { Pagination } from "swiper/modules"
 import { useTranslation } from "react-i18next"
 import { gitRepoStore } from "../../store/githubRepo/gitRepoStore"
 import Header from "../../layout/header/Header"
-import { FC, useEffect } from "react"
+import { FC } from "react"
 
 const CurrentProject: FC = () => {
     let { id } = useParams()

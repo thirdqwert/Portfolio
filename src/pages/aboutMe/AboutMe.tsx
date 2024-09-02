@@ -5,7 +5,6 @@ import MainL from '../../layout/main/MainL'
 import { useTranslation } from 'react-i18next'
 import Header from '../../layout/header/Header'
 import { FC, useEffect } from 'react'
-import ScrollToTop from '../../components/scrollToTop/ScrollToTop'
 const AboutMe: FC = () => {
   let { t } = useTranslation()
   return (
