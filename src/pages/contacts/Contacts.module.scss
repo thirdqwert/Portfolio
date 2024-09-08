@@ -79,6 +79,9 @@
                 width: 100px;
                 text-transform: uppercase;
             }
+            p {
+                color: var(--mainColor);
+            }
         }
 
         &_links {
