@@ -4,7 +4,7 @@
     left: 0;
     height: calc(100vh - 70px);
     width: 25%;
-
+    user-select: none;
     &.small {
         width: max-content;
 
@@ -25,6 +25,7 @@
         bottom: 0;
         border: none;
         z-index: 999;
+
         .nav {
             max-width: 400px;
             border-right: none;
@@ -147,6 +148,7 @@
             font-size: 30px;
             cursor: pointer;
             width: max-content;
+            user-select: none;
 
             svg {
                 path {

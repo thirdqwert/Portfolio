@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { AnimationsHW, burgerJs, clockJs, EcoHubGit, firstNike, gitFinder, htmlAndCss, javaScript, OkuHW, opppenheimerTest, reactAndSass, reactNotes, reactrouterhw, StarFallYellow, totemboHW, typeScript } from "../../utils/getImg"
+import { AnimationsHW, burgerJs, clockJs, EcoHubGit, firstNike, gitFinder, htmlAndCss, javaScript, OkuHW, opppenheimerTest, Portfolio, reactAndSass, reactNotes, reactrouterhw, secondDiplom, StarFallYellow, totemboHW, typeScript } from "../../utils/getImg"
 interface ISkill {
     id: number,
     name: string,
@@ -27,7 +27,7 @@ export let useDataSkills = create<IUseDataSkills>(() => ({
             'opppenheimerTest': opppenheimerTest,
             'EcoHubGit': EcoHubGit,
         }
-        
+
     },
     {
         id: 2,
@@ -46,6 +46,8 @@ export let useDataSkills = create<IUseDataSkills>(() => ({
             'react-notes': reactNotes,
             'git-finder': gitFinder,
             'react-router-hw': reactrouterhw,
+            'Portfolio': Portfolio,
+            'secondDiplom': secondDiplom,
         }
     },
     {
@@ -53,6 +55,8 @@ export let useDataSkills = create<IUseDataSkills>(() => ({
         name: 'TypeScript',
         img: typeScript,
         reposName: {
+            'Portfolio': Portfolio,
+            'secondDiplom': secondDiplom,
         }
     }],
 }))

@@ -25,6 +25,7 @@
         &__btnMenu {
             font-size: 25px;
             cursor: pointer;
+            user-select: none;
 
             svg {
                 path {
@@ -38,6 +39,8 @@
             text-transform: uppercase;
             font-weight: 500;
             cursor: pointer;
+            user-select: none;
+
         }
     }
 

@@ -73,7 +73,7 @@ const CurrentProject: FC = () => {
                                                 )
                                                 )}
                                         </Swiper>
-                                    ) : <p>{t('ImageNotFound')}</p>}
+                                    ) : <p style={{color:"white"}}>{t('ImageNotFound')}</p>}
                                     <p className={s.project__cnt_name}>{currentItem.name}</p>
                                     <p className={s.project__cnt_date}>{t('CreatedAt')}: {currentItem.created_at.split('T')[0]}</p>
                                     <a href={currentItem.homepage} className={s.project__cnt_link}>{t('VisitWebSite')}</a>

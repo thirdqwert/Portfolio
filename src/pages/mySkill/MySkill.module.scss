@@ -26,6 +26,8 @@
             width: 90px;
             text-transform: uppercase;
             justify-content: center;
+            cursor: pointer;
+            user-select: none;
         }
 
         &_list {

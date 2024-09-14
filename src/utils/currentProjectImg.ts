@@ -19,10 +19,12 @@ import totemboHW_1 from '../assets/currentProjectImg/totemboHW-1.png';
 import totemboHW_2 from '../assets/currentProjectImg/totemboHW-2.png';
 import totemboHW_3 from '../assets/currentProjectImg/totemboHW-3.png';
 import totemboHW_4 from '../assets/currentProjectImg/totemboHW-4.png';
+import Portfolio_1 from '../assets/currentProjectImg/Portfolio-1.png';
+import secondDiplom_1 from '../assets/currentProjectImg/secondDiplom-1.png';
 interface ICurrentImg {
   [key: string]: string[],
 }
-const currentImg:ICurrentImg = {
+const currentImg: ICurrentImg = {
   "AnimationsHW": [
     animationsHW_1
   ],
@@ -67,6 +69,12 @@ const currentImg:ICurrentImg = {
     totemboHW_2,
     totemboHW_3,
     totemboHW_4,
+  ],
+  "Portfolio": [
+    Portfolio_1
+  ],
+  "secondDiplom": [
+    secondDiplom_1
   ]
 };
 
