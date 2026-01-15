@@ -16,6 +16,7 @@ const Header: FC<IProps> = ({ headerText }) => {
     localStorage.setItem('lang', newLang)
     i18n.changeLanguage(newLang)
   }
+  
   useEffect(() => {
     if (localStorage.getItem('lang')) {
       i18n.changeLanguage(localStorage.getItem('lang')!)

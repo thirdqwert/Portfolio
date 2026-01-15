@@ -41,6 +41,7 @@ const Contacts: FC = () => {
     }
     form.current = null
     reset()
+    return
   }
   console.log(form.current);
   return (
